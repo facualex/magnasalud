@@ -1,0 +1,16 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll": true,
+    },
+    "editor.formatOnSave": true,
+    "javascript.format.enable": false,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "prettier.printWidth": 100
+}                                                                                                                                                         
