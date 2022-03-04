@@ -3,8 +3,9 @@ import { IconBaseProps, IconType } from 'react-icons';
 import { HiMenu } from 'react-icons/hi';
 import { RiContrastFill } from 'react-icons/ri';
 import { VscTextSize } from 'react-icons/vsc';
-import { MdOutlineLocalOffer, MdPriceCheck } from 'react-icons/md';
-import { FaTooth } from 'react-icons/fa';
+import { MdOutlineLocalOffer, MdPriceCheck, MdClose } from 'react-icons/md';
+import { FaTooth, FaWhatsapp } from 'react-icons/fa';
+import { FiSend } from 'react-icons/fi';
 
 type AvailableIcons =
   | 'menu'
@@ -13,7 +14,10 @@ type AvailableIcons =
   | 'fontSizeDown'
   | 'offer'
   | 'tooth'
-  | 'price';
+  | 'price'
+  | 'whatsapp'
+  | 'send'
+  | 'close';
 
 interface IconWithStyles {
   icon: IconType;
@@ -33,6 +37,9 @@ const icons: Record<AvailableIcons, IconType | IconWithStyles> = {
   offer: MdOutlineLocalOffer,
   tooth: FaTooth,
   price: MdPriceCheck,
+  whatsapp: FaWhatsapp,
+  send: FiSend,
+  close: MdClose,
 };
 
 interface IconProps extends IconBaseProps {
