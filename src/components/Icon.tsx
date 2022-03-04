@@ -3,8 +3,17 @@ import { IconBaseProps, IconType } from 'react-icons';
 import { HiMenu } from 'react-icons/hi';
 import { RiContrastFill } from 'react-icons/ri';
 import { VscTextSize } from 'react-icons/vsc';
+import { MdOutlineLocalOffer, MdPriceCheck } from 'react-icons/md';
+import { FaTooth } from 'react-icons/fa';
 
-type AvailableIcons = 'menu' | 'contrast' | 'fontSizeUp' | 'fontSizeDown';
+type AvailableIcons =
+  | 'menu'
+  | 'contrast'
+  | 'fontSizeUp'
+  | 'fontSizeDown'
+  | 'offer'
+  | 'tooth'
+  | 'price';
 
 interface IconWithStyles {
   icon: IconType;
@@ -21,6 +30,9 @@ const icons: Record<AvailableIcons, IconType | IconWithStyles> = {
       transform: 'scaleX(-1)',
     },
   },
+  offer: MdOutlineLocalOffer,
+  tooth: FaTooth,
+  price: MdPriceCheck,
 };
 
 interface IconProps extends IconBaseProps {
