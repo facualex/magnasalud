@@ -79,7 +79,9 @@ const IndexPage = () => {
         <img src="background-woman.png" className="object-cover w-full h-full" />
       </section>
       <section className="w-full mt-16">
-        <h1 className="text-xl text-primary-500 font-bold pb-10 text-center">NOSOTROS</h1>
+        <h1 className="text-xl text-primary-500 font-bold pb-10 text-center after:h-1 after:w-2/12 after:bg-primary-500 after:flex">
+          NOSOTROS
+        </h1>
         <ImageViewer images={images} />
 
         <div className="w-screen text-primary-600 p-8 shadow-sm relative">
@@ -92,7 +94,7 @@ const IndexPage = () => {
               </span>
             </div>
           </div>
-          <div className="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 absolute bottom-0 right-0 left-0"></div>
+          <div className="w-full h-1 bg-gradient-to-r from-primary-200 to-primary-500 absolute bottom-0 right-0 left-0"></div>
         </div>
         <div className="w-screen flex justify-center items-center pt-8">
           <h2 className="text-[1.5rem] w-3/4 text-center text-primary-600 italic">
@@ -149,37 +151,106 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="w-screen mb-56">
+      <section className="w-screen mb-36">
         <div className="flex flex-col justify-center items-center w-full h-80 bg-slate-600 bg-services-image bg-cover bg-center relative">
           <div className="absolute top-0 bottom-0 left-0 right-0 bg-black opacity-10"></div>
           <h1 className="flex justify-center border-2 border-primary-500 p-5 w-10/12 bg-white text-primary-500 font-bold opacity-90">
             SERVICIOS
           </h1>
         </div>
-        <div className="flex flex-col items-center font-bold text-sm text-primary-600">
-          <div className="w-10/12 bg-slate-100 relative px-6 py-4 mt-10 mb-5 rounded-sm shadow-sm">
-            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-600"></div>
+        <div className="flex flex-col items-center font-bold text-sm text-primary-500">
+          <div className="w-10/12 bg-white relative px-6 py-4 mt-10 mb-5 rounded-sm shadow-sm">
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-500"></div>
             <span>Odontología general</span>
           </div>
-          <div className="w-10/12 bg-slate-100 relative px-6 py-4 mb-5 rounded-sm shadow-sm">
-            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-600"></div>
+          <div className="w-10/12 bg-white relative px-6 py-4 mb-5 rounded-sm shadow-sm">
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-500"></div>
             <span>Odontología estética</span>
           </div>
-          <div className="w-10/12 bg-slate-100 relative px-6 py-4 mb-5 rounded-sm shadow-sm">
-            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-600"></div>
+          <div className="w-10/12 bg-white relative px-6 py-4 mb-5 rounded-sm shadow-sm">
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-500"></div>
             <span>Endodoncias</span>
           </div>
-          <div className="w-10/12 bg-slate-100 relative px-6 py-4 mb-5 rounded-sm shadow-sm">
-            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-600"></div>
+          <div className="w-10/12 bg-white relative px-6 py-4 mb-5 rounded-sm shadow-sm">
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-500"></div>
             <span>Blanqueamientos dentales</span>
           </div>
-          <div className="w-10/12 bg-slate-100 relative px-6 py-4 mb-5 rounded-sm shadow-sm">
-            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-600"></div>
+          <div className="w-10/12 bg-white relative px-6 py-4 mb-5 rounded-sm shadow-sm">
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-500"></div>
             <span>Prótesis removibles</span>
           </div>
-          <div className="w-10/12 bg-slate-100 relative px-6 py-4 mb-5 rounded-sm shadow-sm">
-            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-600"></div>
+          <div className="w-10/12 bg-white relative px-6 py-4 mb-5 rounded-sm shadow-sm">
+            <div className="absolute left-0 top-0 bottom-0 w-3 bg-primary-500"></div>
             <span>Prótesis fijas</span>
+          </div>
+        </div>
+      </section>
+      <section className="w-screen mb-10 bg-slate-50 pt-16 pb-2">
+        <div className="flex flex-col items-center text-primary-500">
+          <h1 className="text-lg text-primary-500 font-bold">UBICACIÓN</h1>
+          <Icon icon="location" size="2rem" className="text-primary-400 mt-2" />
+        </div>
+        <div className="w-screen">
+          <div className="flex justify-center">
+            <p className="text-slate-500 text-md w-10/12 text-center mb-10 mt-5">
+              Estamos a pasos del metro Plaza de Armas por la salida Estado
+            </p>
+          </div>
+          <div className="flex w-full justify-evenly text-slate-500">
+            <div className="flex">
+              <Icon icon="mapPin" size="1.3rem" className="text-primary-500 mr-2" />
+              <span>Paseo Philips 451</span>
+            </div>
+            <div className="flex">
+              <Icon icon="building" size="1.3rem" className="text-primary-500 mr-2" />
+              <span>Piso 7, Oficina 708</span>
+            </div>
+          </div>
+          <div className="flex justify-center items-center text-white w-full h-96 bg-slate-600 my-10">
+            MAP
+          </div>
+        </div>
+      </section>
+      <section className="w-screen pb-56">
+        <div className="flex flex-col items-center text-primary-500 mb-10">
+          <h1 className="text-lg text-primary-500 font-bold">CONTACTO</h1>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex items-center justify-between w-11/12 py-3 px-2 rounded-sm border mb-3">
+            <div className="flex">
+              <Icon icon="building" size="1.5rem" className="text-primary-500 mx-2" />
+              <span className="text-sm">+22 699 08 45</span>
+            </div>
+            <button className="flex justify-center items-center bg-primary-500 text-white font-bold py-2 px-5 rounded-sm text-xs">
+              LLAMAR
+            </button>
+          </div>
+          <div className="flex items-center justify-between w-11/12 py-3 px-2 rounded-sm border mb-3">
+            <div className="flex">
+              <Icon icon="building" size="1.5rem" className="text-primary-500 mx-2" />
+              <span className="text-sm">WhatsApp</span>
+            </div>
+            <button className="flex justify-center items-center bg-primary-500 text-white font-bold py-2 px-5 rounded-sm text-xs">
+              ENVIAR MENSAJE
+            </button>
+          </div>
+          <div className="flex items-center justify-between w-11/12 py-3 px-2 rounded-sm border mb-3">
+            <div className="flex">
+              <Icon icon="building" size="1.5rem" className="text-primary-500 mx-2" />
+              <span className="text-sm">consulta@magnasalud.cl</span>
+            </div>
+            <button className="flex justify-center items-center bg-primary-500 text-white font-bold py-2 px-5 rounded-sm text-xs">
+              ENVIAR MAIL
+            </button>
+          </div>
+          <div className="flex items-center justify-between w-11/12 py-3 px-2 rounded-sm border">
+            <div className="flex">
+              <Icon icon="building" size="1.5rem" className="text-primary-500 mx-2" />
+              <span className="text-sm">Instagram</span>
+            </div>
+            <button className="flex justify-center items-center bg-primary-500 text-white font-bold py-2 px-5 rounded-sm text-xs">
+              VISITAR
+            </button>
           </div>
         </div>
       </section>

@@ -3,10 +3,12 @@ import { IconBaseProps, IconType } from 'react-icons';
 import { HiMenu } from 'react-icons/hi';
 import { RiContrastFill } from 'react-icons/ri';
 import { VscTextSize } from 'react-icons/vsc';
-import { MdOutlineLocalOffer, MdPriceCheck, MdClose } from 'react-icons/md';
+import { MdOutlineLocalOffer, MdPriceCheck, MdClose, MdLocationPin } from 'react-icons/md';
 import { FaTooth, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
 import { GiHealthIncrease } from 'react-icons/gi';
+import { BsFillPinMapFill } from 'react-icons/bs';
+import { BiBuilding } from 'react-icons/bi';
 
 type AvailableIcons =
   | 'menu'
@@ -20,7 +22,10 @@ type AvailableIcons =
   | 'send'
   | 'close'
   | 'instagram'
-  | 'health';
+  | 'health'
+  | 'location'
+  | 'mapPin'
+  | 'building';
 
 interface IconWithStyles {
   icon: IconType;
@@ -45,6 +50,9 @@ const icons: Record<AvailableIcons, IconType | IconWithStyles> = {
   close: MdClose,
   instagram: FaInstagram,
   health: GiHealthIncrease,
+  location: MdLocationPin,
+  mapPin: BsFillPinMapFill,
+  building: BiBuilding,
 };
 
 interface IconProps extends IconBaseProps {
