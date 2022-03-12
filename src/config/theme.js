@@ -22,6 +22,7 @@ const theme = {
     },
     backgroundImage: {
       'chat-image': "url('../../static/doctora.jpeg')",
+      'services-image': "url('../../static/services-woman.jpeg')",
     },
   },
   screens: {

@@ -4,8 +4,9 @@ import { HiMenu } from 'react-icons/hi';
 import { RiContrastFill } from 'react-icons/ri';
 import { VscTextSize } from 'react-icons/vsc';
 import { MdOutlineLocalOffer, MdPriceCheck, MdClose } from 'react-icons/md';
-import { FaTooth, FaWhatsapp } from 'react-icons/fa';
+import { FaTooth, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
+import { GiHealthIncrease } from 'react-icons/gi';
 
 type AvailableIcons =
   | 'menu'
@@ -17,7 +18,9 @@ type AvailableIcons =
   | 'price'
   | 'whatsapp'
   | 'send'
-  | 'close';
+  | 'close'
+  | 'instagram'
+  | 'health';
 
 interface IconWithStyles {
   icon: IconType;
@@ -40,6 +43,8 @@ const icons: Record<AvailableIcons, IconType | IconWithStyles> = {
   whatsapp: FaWhatsapp,
   send: FiSend,
   close: MdClose,
+  instagram: FaInstagram,
+  health: GiHealthIncrease,
 };
 
 interface IconProps extends IconBaseProps {

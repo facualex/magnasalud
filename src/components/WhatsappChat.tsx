@@ -63,16 +63,17 @@ function WhatsappChat(props: WhatsappChatProps) {
         ${isOpen ? 'scale-100 ' : 'scale-0'}
         ease-in-out
         duration-300
-        absolute
-        -top-[31rem]
-        left-0
+        fixed
+        bottom-32
+        right-3
         z-30
-        w-full
+        w-11/12
         rounded-t-md
+        border
   `;
 
   return (
-    <div className="flex absolute bottom-20 right-5 top rounded">
+    <div className="flex fixed bottom-20 right-5 top rounded bottom w-">
       <div className="flex w-80">
         <div className={textTagClasses}>
           <div className="flex items-center text-emerald-500 mb-1">
@@ -99,20 +100,38 @@ function WhatsappChat(props: WhatsappChatProps) {
               icon="close"
               color="white"
               size="1.2rem"
-              style={{ marginRight: '1rem' }}
+              style={{ marginRight: '1rem', cursor: 'pointer' }}
               onClick={toggleOpen}
             />
           </div>
-          <div className="flex flex-col content-between h-96 bg-white border border-primary-300 p-3">
-            <span className="flex-1 bg-slate-200">Content</span>
-            <span className="bg-slate-400">Content</span>
+          <div className="flex flex-col content-between h-96 bg-white">
+            <div className="flex-1">
+              <div className="flex flex-col bg-slate-100 py-8 px-3 items-center">
+                <div className="flex items-center justify-center text-primary-600 pl-2">
+                  <Icon icon="offer" size="2.2rem" />
+                  <span className="text-xs flex-1 text-slate-600 pl-3">
+                    ¡Te invitamos a seguirnos en Instagram! Siempre publicamos descuentos y
+                    promociones.
+                  </span>
+                </div>
+                <div className="flex justify-center items-center mt-3 text-rose-500">
+                  <Icon icon="instagram" size="1.5rem" />
+                  <span className="text-xs text-slate-600 ml-1">@magnasalud.cl</span>
+                </div>
+              </div>
+            </div>
+            <span className="text-xs text-slate-500 px-3 mb-2">
+              Escribe un mensaje a la doctora para{' '}
+              <span className="text-primary-600 font-bold">agendar una hora</span> o si tienes{' '}
+              <span className="text-primary-600 font-bold">una consulta</span>.
+            </span>
           </div>
-          <div className="bg-white flex items-center border border-primary-500 p-2">
+          <div className="bg-white flex items-center justify-center p-2 pb-5 relative">
             <input
-              className="flex-1 bg-slate-100 py-1 px-3 rounded-full border border-slate-500 mr-2"
+              className="flex-1 bg-slate-100 py-2 px-3 rounded-full border text-primary-700 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 pr-16"
               placeholder="Escribe tu mensaje aquí..."
             />
-            <div className="flex justify-center items-center bg-primary-500 text-white p-2 rounded-full">
+            <div className="flex justify-center items-center bg-primary-500 text-white p-3 rounded-full absolute right-1 cursor-pointer">
               <Icon icon="send" size="1.3rem" />
             </div>
           </div>
