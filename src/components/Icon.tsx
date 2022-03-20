@@ -1,16 +1,25 @@
 import React from 'react';
 import { IconBaseProps, IconType } from 'react-icons';
 import { HiMenu } from 'react-icons/hi';
-import { RiContrastFill } from 'react-icons/ri';
+import { RiContrastFill, RiTeamLine } from 'react-icons/ri';
 import { VscTextSize } from 'react-icons/vsc';
-import { MdOutlineLocalOffer, MdPriceCheck, MdClose, MdLocationPin } from 'react-icons/md';
+import {
+  MdOutlineLocalOffer,
+  MdPriceCheck,
+  MdClose,
+  MdLocationPin,
+  MdOutlineLocationOn,
+  MdMailOutline,
+  MdPhone,
+  MdWorkOutline,
+} from 'react-icons/md';
 import { FaTooth, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FiSend } from 'react-icons/fi';
 import { GiHealthIncrease } from 'react-icons/gi';
 import { BsFillPinMapFill } from 'react-icons/bs';
-import { BiBuilding } from 'react-icons/bi';
+import { BiBuilding, BiChevronRightCircle, BiHomeAlt } from 'react-icons/bi';
 
-type AvailableIcons =
+export type AvailableIcons =
   | 'menu'
   | 'contrast'
   | 'fontSizeUp'
@@ -24,8 +33,15 @@ type AvailableIcons =
   | 'instagram'
   | 'health'
   | 'location'
+  | 'locationOutline'
   | 'mapPin'
-  | 'building';
+  | 'building'
+  | 'mail'
+  | 'phone'
+  | 'back'
+  | 'home'
+  | 'team'
+  | 'work';
 
 interface IconWithStyles {
   icon: IconType;
@@ -51,8 +67,15 @@ const icons: Record<AvailableIcons, IconType | IconWithStyles> = {
   instagram: FaInstagram,
   health: GiHealthIncrease,
   location: MdLocationPin,
+  locationOutline: MdOutlineLocationOn,
   mapPin: BsFillPinMapFill,
   building: BiBuilding,
+  mail: MdMailOutline,
+  phone: MdPhone,
+  back: BiChevronRightCircle,
+  home: BiHomeAlt,
+  team: RiTeamLine,
+  work: MdWorkOutline,
 };
 
 interface IconProps extends IconBaseProps {

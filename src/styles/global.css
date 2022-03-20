@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 html {
-  @apply selection:bg-primary-500 selection:text-white;
+  @apply selection:bg-primary-600 selection:text-white scroll-smooth pt-14;
 }
